@@ -1,0 +1,55 @@
+.balls-wrapper {
+  width: 148px;
+  height: 50px;
+  position: relative;
+}
+.ball-slot {
+  position: absolute;
+  width: 90px;
+  display: flex;
+  justify-content: space-between;
+  animation: 2s rotate-ball linear infinite;
+}
+.ball-slot:nth-child(2) {
+  animation-delay: 0.7s;
+  left: 22px;
+}
+.ball-slot:nth-child(3) {
+  animation-delay: 1.4s;
+
+  left: 45px;
+}
+.ball-slot:nth-child(4) {
+  animation-delay: 3s;
+
+  left: 67px;
+}
+.ball-slot > div {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+.red-ball {
+  background-color: red;
+}
+.green-ball {
+  background-color: green;
+}
+.blue-ball {
+  background-color: blue;
+}
+.yellow-ball {
+  background-color: yellow;
+}
+@keyframes rotate-ball {
+  0% {
+    transform: rotate(0deg);
+  }
+  20% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}

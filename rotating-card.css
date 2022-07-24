@@ -1,0 +1,40 @@
+.rotating-card-wrapper {
+  perspective: 500px;
+  width: 200px;
+  height: 200px;
+  transform-style: preserve-3d;
+  perspective-origin: 0px -150px;
+}
+.rotating-card-green {
+  background-color: rgb(13, 214, 164);
+  position: absolute;
+  inset: 0;
+  animation: rotate1 3s linear infinite;
+  width: 200px;
+  height: 200px;
+}
+.rotating-card-red {
+  background-color: rgb(190, 68, 68);
+  position: absolute;
+  inset: 0;
+  transform: rotateY(90deg);
+  width: 200px;
+  height: 200px;
+  animation: rotate2 3s linear infinite;
+}
+@keyframes rotate1 {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(180deg);
+  }
+}
+@keyframes rotate2 {
+  0% {
+    transform: rotateY(90deg);
+  }
+  100% {
+    transform: rotateY(270deg);
+  }
+}

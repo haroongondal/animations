@@ -1,0 +1,35 @@
+.body {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.box {
+  display: flex;
+  flex: 0 0 auto;
+  justify-content: center;
+  align-items: center;
+  height: 480px;
+  background-color: #1d1e2c;
+  outline: 1px solid white;
+}
+
+@media screen and (max-width: 785px) {
+  .box {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 991px) {
+  .box {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 1300px) {
+  .box {
+    width: 33%;
+  }
+}
+@media screen and (min-width: 1301px) {
+  .box {
+    width: 25%;
+  }
+}
