@@ -3,3 +3,16 @@ os: linux
 files:
   - source: /
     destination: /var/www/httpd
+hooks:
+  ApplicationStop:
+    - location: application_stop.sh
+      timeout: 300
+      runas: ec2-user
+  BeforeInstall:
+    - location: before_install.sh
+      timeout: 300
+      runas: ec2-user
+  ApplicationStart:
+    - location: application_start.sh
+      timeout: 300
+      runas: ec2-user
